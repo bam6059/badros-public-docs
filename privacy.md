@@ -5,7 +5,7 @@ title: BadrOS privacy policy
 
 # BadrOS privacy policy
 
-Effective date: 20 October 2026
+Effective date: 21 October 2026
 
 BadrOS is a privately operated personal application, hosted on the owner's
 computer. This policy describes its optional Gmail integration and associated
@@ -20,10 +20,16 @@ With the account owner's authorization, BadrOS requests these Gmail permissions:
   including message identifiers, headers and available message text.
 - Gmail send access: send an email containing the recipient, subject and body
   specified for that send operation.
+- Optional Gmail modify access: move a specifically selected message to Gmail
+  Trash. This requires an additional Google authorization; an existing
+  read-and-send grant remains separate until an upgrade succeeds.
 
 BadrOS uses this information to show selected messages, save selected text,
 prepare selected text for permitted uses and carry out requested email sends.
-It does not use these permissions to delete mail or change mailbox labels.
+The optional Trash action changes the selected message's mailbox state. BadrOS
+does not provide a permanent-delete action. A message in Trash can be restored
+using Gmail while Google still retains it; Google's own Trash retention and
+deletion rules continue to apply.
 
 The application stores the connected account address and authorization tokens
 needed to identify the account and maintain the authorized connection. It does
@@ -49,18 +55,27 @@ and the
 [Google Workspace API User Data and Developer Policy](https://developers.google.com/workspace/workspace-api-user-data-developer-policy),
 including Limited Use, for Google-sourced information and its derivatives.
 
-External AI processing of Gmail-derived content is on hold until the provider's
-applicable data-use and retention arrangements have been verified against these
-requirements. Google authorization alone does not approve this processing.
-This is an operational restriction, not a claim that the current application
-contains a technical block against every possible transfer.
+The optional summary sends the selected local message text, the owner's question
+and the conversation context prepared for that question to the owner's connected
+ChatGPT account. It does not automatically transmit the whole mailbox or email
+attachments. Recognized Gmail copies are restricted to this ChatGPT connection,
+with no automatic fallback to DeepSeek or the ordinary chat provider. This
+recognition is not a universal filter for mail text manually rewritten or copied
+without its Gmail source framing.
 
-If a compliant provider configuration is enabled later, BadrOS will explain what
-selected content is to be sent before obtaining the owner's consent. A locally
-stored original does not prevent a provider from processing or retaining a copy
-sent to it. BadrOS does not sell Google user data, use it for advertising, or use
-it to create, train or improve generalized AI models. Those restrictions also
-apply to permitted downstream processing.
+The owner must keep ChatGPT's model-improvement setting disabled for the account
+used by this connection. BadrOS does not change or continuously verify that
+external account setting. Google authorization alone does not approve external
+AI processing. Before a different destination or materially different use is
+enabled, the applicable privacy conditions must be assessed and the owner's
+consent obtained.
+
+A locally stored original does not prevent ChatGPT from processing or retaining
+the copy sent to it under its applicable terms and settings. Disabling model
+improvement is not a promise of zero retention or immediate downstream deletion.
+BadrOS does not sell Google user data, use it for advertising, or use it to
+create, train or improve generalized AI models. Those restrictions also apply
+to permitted downstream processing.
 
 ## Retention and disconnection
 
@@ -73,6 +88,9 @@ local copies, related conversations and backups with the owner before removal.
 The current integration does not provide a one-click purge of all Gmail-derived
 data. Previously created backups can retain earlier copies until those backups
 are removed or expire.
+
+Moving a message to Gmail Trash does not remove its previously saved local copy,
+related conversation or backup. Those copies require separate local removal.
 
 Disconnecting Gmail in BadrOS clears its current local authorization grant; it
 does not delete previously imported message copies, conversations or backups.

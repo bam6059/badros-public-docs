@@ -5,7 +5,7 @@ title: BadrOS terms of use
 
 # BadrOS terms of use
 
-Effective date: 20 October 2026
+Effective date: 21 October 2026
 
 BadrOS is a privately operated personal application. This public website provides
 information about it; it does not offer public access to the private workspace.
@@ -16,6 +16,11 @@ Connect only a Google account you are authorized to use. The Gmail integration
 requires Google authorization. You remain responsible for reviewing recipients
 and message contents before requesting a send. A Google acceptance receipt
 does not guarantee delivery to the recipient.
+
+The optional additional Gmail permission enables moving a selected message to
+Trash, not permanent deletion through BadrOS. Review the selected message before
+requesting this action. Google's own Trash rules still apply, and local saved
+copies and backups are not removed by this action.
 
 ## Availability and costs
 
@@ -32,8 +37,9 @@ AI summaries can contain errors or omit important context. Check the original
 message before relying on a summary or taking a consequential action. You are
 responsible for protecting your computer and managing your local data and backups.
 
-The [privacy policy](privacy.html) explains local storage, the hold on external
-AI processing of Gmail content, retention and how to disconnect Gmail access.
+The [privacy policy](privacy.html) explains local storage, optional selected-text
+processing through ChatGPT with model improvement disabled, retention, Trash and
+how to disconnect Gmail access. It does not promise zero provider retention.
 
 ## Third party services
 
